@@ -8,9 +8,9 @@ Developed as my first-ever hands-on project in Power BI, this project translates
 
 ### Dataset
 **Source:** Dataset Based on Chinese Hamster Ovary (CHO) Cultivations including Turbidity, Permittivity, O2 and CO2 Measurements [(Zenodo: 10.5281/zenodo.20829178)](https://doi.org/10.5281/zenodo.20829178)
-- used 24 files from "Time-axis aligned raw data tables"
+- used 48 files from "Time-axis aligned raw data tables"
 
-**Scope:** 24 bioreactor cultivation runs tracking both daily offline laboratory samples and continuous high-frequency inline sensor telemetry.
+**Scope:** 24 bioreactor cultivation runs tracking both offline laboratory samples and continuous high-frequency inline sensor telemetry.
 
 > **Citation:**
 >

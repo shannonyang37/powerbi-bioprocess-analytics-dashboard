@@ -111,6 +111,6 @@ FORMAT(Min_pH, "0.00") & " – " & FORMAT(Max_pH, "0.00")
 
 ---
 
-#### How to Use This Repository
+#### How to View the Dashboard
 1. Clone or download this repository.
 2. Open the `Bioprocess Analytics Dashboard.pbix` file in **Microsoft Power BI Desktop**.

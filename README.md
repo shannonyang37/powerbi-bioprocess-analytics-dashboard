@@ -2,7 +2,7 @@
 
 ### Project Overview
 This repository showcases an end-to-end **Bioprocess Monitoring** built in **Microsoft Power BI**. 
-Developed as my **first-ever hands-on project in Power BI**, this project translates complex upstream Chinese Hamster Ovary (CHO) cell cultivation data into a dashboard visualization for process insights. 
+Developed as my first-ever hands-on project in Power BI, this project translates complex upstream Chinese Hamster Ovary (CHO) cell cultivation data into a dashboard visualization for process insights. 
 
 ---
 
@@ -32,12 +32,12 @@ Developed as my **first-ever hands-on project in Power BI**, this project transl
      |        Offline_Data       |       |        Inline_Data        |
      |---------------------------|       |---------------------------|
      | * Experiment_ID           |       | * Experiment_ID           |
-     | - Cultivation_Time_h      |       | - Cultivation_Time_h      |
-     | - Viable_Cell_Density     |       | - pH                      |
-     | - Viability_Pct           |       | - Dissolved_O2_Pct        |
-     | - Glucose_gL              |       | - Dissolved_CO2_Pct       |
-     | - Lactate_gL              |       | - Temperature_degC        |
-     | - Ammonium_mM             |       | - Agitation_rpm           |
+     | - Time (h)                |       | - Time (h)                |
+     | - VCD Mean (cells/mL)     |       | - pH                      |
+     | - Viability Mean (%)      |       | - Dissolved O2 (% air sat)|
+     | - Glucose (g/L)           |       | - Dissolved CO2 (%-sat)   |
+     | - Lactate (g/L)           |       | - Temperature (degC)      |
+     | - Ammonium (mM)           |       | - Agitation rate (rpm)    |
      +---------------------------+       +---------------------------+
 ```
 ---
@@ -62,9 +62,9 @@ Monitors continuous bioreactor parameters ($p\text{O}_2$, $p\text{CO}_2$, pH, Te
 
 ---
 
-## 🧮 Highlighted DAX Measures
+#### Highlighted DAX Measures
 
-All calculations are centralized in a dedicated `_Measures` table. Below are key examples demonstrating filter context manipulation, tie-breaking aggregation, and string formatting:
+All calculations are centralized in a dedicated `_Measures` table. Below are some examples demonstrating filter context manipulation, tie-breaking aggregation, and string formatting:
 
 ```dax
 // 1. Time to Peak VCD
@@ -103,15 +103,14 @@ FORMAT(Min_pH, "0.00") & " – " & FORMAT(Max_pH, "0.00")
 
 ---
 
-## 🛠️ Skills Demonstrated
-* **Microsoft Power BI Desktop:** End-to-end report design, custom report-page tooltips, synchronized cross-page slicers, conditional formatting heatmaps, and drillthrough navigation.
-* **Power Query (M):** Multi-file folder ingestion, delimiter parsing, sensor noise filtering, and schema pruning.
+#### Skills Demonstrated
+* **Microsoft Power BI Desktop:** End-to-end report design, custom report-page tooltips, synchronized cross-page slicers, and conditional formatting heatmaps.
+* **Power Query (M):** Multi-file folder ingestion, delimiter parsing, and schema pruning.
 * **Data Modeling & DAX:** Conformed Star Schema design across mixed time granularities, context transition handling (`CALCULATE`, `FILTER`, `ALLSELECTED`), and variable-driven DAX formulas.
 * **Bioprocess Domain Knowledge:** Upstream CHO cell physiology, substrate limitation kinetics, byproduct inhibition, and bioreactor PID control monitoring.
 
 ---
 
-## 🚀 How to Use This Repository
+#### How to Use This Repository
 1. Clone or download this repository.
-2. Open the `.pbix` (or `.pbit` template) file in **Microsoft Power BI Desktop**.
-3. Use the **Fleet Leaderboard** page to compare all 24 runs, or right-click any `Experiment_ID` and select **Drill through** to inspect its biological, metabolic, and hardware telemetry in detail.
+2. Open the `Bioprocess Analytics Dashboard.pbix` file in **Microsoft Power BI Desktop**.
